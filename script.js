@@ -3,8 +3,6 @@ $(document).ready(function () {
     url: "https://fakestoreapi.com/products",
     method: "GET",
     success: function (data) {
-      //   console.log(data);
-
       BindProductsList(data);
     },
     error: function (xhr, status, error) {
@@ -18,8 +16,7 @@ function BindProductsList(products) {
 
   productList = "<div class='product-list'>";
   products.forEach((item) => {
-    console.log(item);
-    // productList += "<div class='product-list'>";
+    //console.log(item);
     productList += "<div class='product-card dark'>";
     productList += "<img src='" + item.image + "' width='380' height='370'>";
     productList +=
@@ -40,7 +37,6 @@ function BindProductsList(products) {
       "<button class='add-to-cart-button'><i class='fa-solid fa-plus'></i> Add to cart</button>";
     productList += "</div>";
     productList += "</div>";
-    // productList += "</div>";
   });
   productList += "</div>";
 
