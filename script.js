@@ -21,16 +21,17 @@ function BindProductsList(products) {
     console.log(item);
     // productList += "<div class='product-list'>";
     productList += "<div class='product-card dark'>";
-    productList +=
-      "<img class='product-img' src='" +
-      item.image +
-      "' width='380' height='370'>";
+    productList += "<img src='" + item.image + "' width='380' height='370'>";
     productList += "<h5 class='product-title dark'>" + item.title + "</h5>";
     productList +=
       "<p class='product-description dark'>" +
       item.description.slice(0, 130) +
       "..." +
       "</p>";
+    productList += "<div class='product-card-footer'>";
+    productList += "<p>$" + item.price + "</p>";
+    productList += "<button class='add-to-cart-button'>Add to cart</button>";
+    productList += "</div>";
     productList += "</div>";
     // productList += "</div>";
   });
